@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Catalog Motor Honda - Dealer Resmi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/assets/images/logo/honda.svg" alt="Honda Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#promo">Promo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonial">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Honda Eka Karunia</h1>
+            <p class="lead mb-5">Temukan motor Honda terbaik dengan harga terbaik dan promo menarik</p>
+            <a href="#products" class="btn btn-honda btn-lg">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="py-5" id="products">
+        <div class="container">
+            <h2 class="text-center section-title">Produk Unggulan</h2>
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/tr:w-550,f-auto,pr-true/uploads/product-draft/colors/beat-street-varian-515x504-brown-2-03062024-045126.png" class="card-img-top product-img" alt="Honda Beat" id="beatImage">
+                            <div class="badge-discount">Promo</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Honda Beat Street</h5>
+                            <div class="mb-3">
+                                <span class="color-option active" style="background-color: #D3C7B2;" title="Brown" onclick="changeBeatColor('Brown', this)"></span>
+                                <span class="color-option" style="background-color: #000000;" title="Black" onclick="changeBeatColor('Black', this)"></span>
+                            </div>
+                            <p class="card-text">Motor matic ekonomis dengan desain sporty dan fitur modern.</p>
+                            <!-- <ul class="specs-list">
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Mesin: 1109,5cc</li>
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Tipe Mesin: 4 Langkah, SOHC, eSP</li>
+                                <li><i class="fas fa-bolt me-2"></i> Daya Maksimum: 6.6 kW (9.0 PS) / 7.500 rpm</li>
+                                <li><i class="fas fa-cog me-2"></i> Torsi Maksimum: 9.2 N.m (0.94 kgf.m) / 6000 rpm</li>
+                                <li><i class="fas fa-gas-pump me-2"></i> Sistem Bahan Bakar: Injeksi (PGM-FI)</li>
+                                <li><i class="fas fa-exchange-alt me-2"></i> Transmisi: Otomatis, V-Matic</li>
+                            </ul> -->
+                            <p class="text-grey">Harga mulai</p>
+                            <p class="price">Rp 21.400.000</p>
+                            <a href="#" class="btn btn-honda w-100" onclick="sendToWhatsApp('Honda Beat Street')">Detail & Promo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/tr:w-550,f-auto,pr-true/uploads/product-draft/colors/5-39-05112024-030657.png" class="card-img-top product-img" alt="Honda Scoopy" id="scoopyImage">
+                            <div class="badge-discount">Promo</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Honda Scoopy</h5>
+                            <div class="mb-3">
+                                <span class="color-option" style="background-color: #000000;" title="Prestige Black" onclick="changeScoopyColor('Prestige Black', this)"></span>
+                                <span class="color-option" style="background-color: #FFFFFF;" title="Prestige White" onclick="changeScoopyColor('Prestige White', this)"></span>
+                                <span class="color-option" style="background-color: #B32A3B;" title="Stylish Red" onclick="changeScoopyColor('Stylish Red', this)"></span>
+                                <span class="color-option" style="background-color: #384C41;" title="Stylish Green" onclick="changeScoopyColor('Stylish Green', this)"></span>
+                                <span class="color-option" style="background-color: #3B4762;" title="Fashion Blue" onclick="changeScoopyColor('Fashion Blue', this)"></span>
+                                <span class="color-option" style="background-color: #574F4A;" title="Fashion Brown" onclick="changeScoopyColor('Fashion Brown', this)"></span>
+                                <span class="color-option" style="background-color: #CBCBCB;" title="Energetic Silver" onclick="changeScoopyColor('Energetic Silver', this)"></span>
+                                <span class="color-option" style="background-color: #D02C29;" title="Energetic Red" onclick="changeScoopyColor('Energetic Red', this)"></span>
+                            </div>
+                            <p class="card-text">Motor matic retro dengan gaya klasik dan teknologi modern.</p>
+                            <!-- <ul class="specs-list">
+                                <li><i class="fas fa-gas-pump me-2"></i> Konsumsi BBM: 45 km/liter</li>
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Mesin: 110cc eSP</li>
+                                <li><i class="fas fa-bolt me-2"></i> Tenaga: 6.2 kW (8.4 PS) / 8,000 rpm</li>
+                            </ul> -->
+                            <p class="text-grey">Harga mulai</p>
+                            <p class="price">Rp 23.727.000</p>
+                            <a href="#" class="btn btn-honda w-100" onclick="sendToWhatsApp('Honda Scoopy')">Detail & Promo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/tr:w-550,f-auto,pr-true/uploads/product-draft/colors/variant-web-roadsync-red-515x504px-r5-06122024-030945.png" class="card-img-top product-img" alt="Honda PCX" id="pcxImage">
+                            <div class="badge-discount">Promo</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Honda PCX 160</h5>
+                            <div class="mb-3">
+                                <span class="color-option" style="background-color: #830E1B;" onclick="changePcxColor('Road Sync Red', this)" title="Road Sync Red"></span>
+                                <span class="color-option" style="background-color: #363538;" onclick="changePcxColor('Road Sync Matte Black', this)" title="Road Sync Matte Black"></span>
+                                <span class="color-option" style="background-color: #E7E9EB;" onclick="changePcxColor('Phenomenal White', this)" title="Phenomenal White"></span>
+                                <span class="color-option" style="background-color: #BA2E3B;" onclick="changePcxColor('Phenomenal Matte Red', this)" title="Phenomenal Matte Red"></span>
+                                <span class="color-option" style="background-color: #514D4A;" onclick="changePcxColor('Phenomenal Matte Silver', this)" title="Phenomenal Matte Silver"></span>
+                                <span class="color-option" style="background-color: #211F24;" onclick="changePcxColor('Phenomenal Matte Black', this)" title="Phenomenal Matte Black"></span>
+                                <span class="color-option" style="background-color: #E1E0E3;" onclick="changePcxColor('Exceptional White', this)" title="Exceptional White"></span>
+                                <span class="color-option" style="background-color: #A7141C;" onclick="changePcxColor('Exceptional Red', this)" title="Exceptional Red"></span>
+                                <span class="color-option" style="background-color: #534E47;" onclick="changePcxColor('Exceptional Matte Silver', this)" title="Exceptional Matte Silver"></span>
+                                <span class="color-option" style="background-color: #1D2020;" onclick="changePcxColor('Exceptional Black', this)" title="Exceptional Black"></span>
+                            </div>
+                            <p class="card-text">Maxi-scooter premium dengan performa tinggi dan fitur canggih.</p>
+                            <!-- <ul class="specs-list">
+                                <li><i class="fas fa-gas-pump me-2"></i> Konsumsi BBM: 40 km/liter</li>
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Mesin: 156.93cc Liquid Cooled</li>
+                                <li><i class="fas fa-bolt me-2"></i> Tenaga: 11.8 kW (16.0 PS) / 8,500 rpm</li>
+                            </ul> -->
+                            <p class="text-grey">Harga mulai</p>
+                            <p class="price">Rp 32.900.000</p>
+                            <a href="#" class="btn btn-honda w-100" onclick="sendToWhatsApp('Honda PCX 160')">Detail & Promo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-honda w-100" onclick="sendToWhatsApp()">Untuk info jenis motor lain klik disini</a>
+                </div>
+                
+                <!-- Product 4 -->
+                <!-- <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/uploads/product/motorcycle/primary/thumbnail/5303-1664268924.png" class="card-img-top product-img" alt="Honda Vario 160">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Honda Vario 160</h5>
+                            <div class="mb-3">
+                                <span class="color-option active" style="background-color: #e40521;" title="Merah"></span>
+                            </div>
+                            <p class="card-text">Motor matic sporty dengan performa tangguh dan fitur modern.</p>
+                            <ul class="specs-list">
+                                <li><i class="fas fa-gas-pump me-2"></i> Konsumsi BBM: 45 km/liter</li>
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Mesin: 156.93cc eSP+</li>
+                                <li><i class="fas fa-bolt me-2"></i> Tenaga: 11.3 kW (15.4 PS) / 8,500 rpm</li>
+                            </ul>
+                            <p class="text-grey">Harga mulai</p>
+                            <p class="price">Rp 26.500.000</p>
+                            <a href="#" class="btn btn-honda w-100" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Honda Vario 160">Detail & Promo</a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Product 5 -->
+                <!-- <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/uploads/product/motorcycle/primary/thumbnail/5302-1664268924.png" class="card-img-top product-img" alt="Honda ADV 160">
+                            <div class="badge-discount">Diskon</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Honda ADV 160</h5>
+                            <div class="mb-3">
+                                <span class="color-option active" style="background-color: #000000;" title="Hitam"></span>
+                                <span class="color-option" style="background-color: #ffffff; border: 1px solid #ddd;" title="Putih"></span>
+                                <span class="color-option" style="background-color: #4169e1;" title="Biru"></span>
+                                <span class="color-option" style="background-color: #964b00;" title="Coklat"></span>
+                            </div>
+                            <p class="card-text">Adventure scooter dengan desain tangguh dan fitur canggih.</p>
+                            <ul class="specs-list">
+                                <li><i class="fas fa-gas-pump me-2"></i> Konsumsi BBM: 42 km/liter</li>
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Mesin: 156.93cc eSP+</li>
+                                <li><i class="fas fa-bolt me-2"></i> Tenaga: 11.3 kW (15.4 PS) / 8,500 rpm</li>
+                            </ul>
+                            <p class="price">Rp 35.200.000</p>
+                            <a href="#" class="btn btn-honda w-100" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Honda ADV 160">Detail & Promo</a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Product 6 -->
+                <!-- <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="position-relative">
+                            <img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/uploads/product/motorcycle/primary/thumbnail/5301-1664268924.png" class="card-img-top product-img" alt="Honda CBR150R">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title product-title">Honda CBR150R</h5>
+                            <div class="mb-3">
+                                <span class="color-option active" style="background-color: #e40521;" title="Merah"></span>
+                                <span class="color-option" style="background-color: #000000;" title="Hitam"></span>
+                                <span class="color-option" style="background-color: #ffffff; border: 1px solid #ddd;" title="Putih"></span>
+                                <span class="color-option" style="background-color: #4169e1;" title="Biru"></span>
+                            </div>
+                            <p class="card-text">Sportbike 150cc dengan performa tinggi dan desain agresif.</p>
+                            <ul class="specs-list">
+                                <li><i class="fas fa-gas-pump me-2"></i> Konsumsi BBM: 35 km/liter</li>
+                                <li><i class="fas fa-tachometer-alt me-2"></i> Mesin: 149.16cc DOHC 4-Valve</li>
+                                <li><i class="fas fa-bolt me-2"></i> Tenaga: 12.6 kW (17.1 PS) / 9,000 rpm</li>
+                            </ul>
+                            <p class="price">Rp 36.900.000</p>
+                            <a href="#" class="btn btn-honda w-100" data-bs-toggle="modal" data-bs-target="#productModal" data-product="Honda CBR150R">Detail & Promo</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Keunggulan Motor Honda</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h4>Irit Bahan Bakar</h4>
+                    <p>Teknologi eSP membuat konsumsi bahan bakar lebih efisien tanpa mengurangi performa.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Keamanan Tinggi</h4>
+                    <p>Dilengkapi dengan fitur keamanan seperti CBS, ABS, dan sistem pengereman canggih.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Teknologi Terkini</h4>
+                    <p>Fitur modern seperti Smart Key, Idling Stop System, dan LED lighting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="py-5" id="promo">
+        <div class="container">
+            <h2 class="text-center section-title">Promo Menarik</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-danger">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0">Cashback hingga Rp 1.500.000</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Dapatkan cashback langsung untuk pembelian Honda Beat dan Scoopy selama periode promo.</p>
+                            <ul>
+                                <li>Berlaku hingga 31 Desember 2023</li>
+                                <li>Minimal DP 20%</li>
+                                <li>Syarat dan ketentuan berlaku</li>
+                            </ul>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-danger">
+                            <a href="#" class="btn btn-honda">Lihat Syarat</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-warning">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0">Diskon DP 10%</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Diskon uang muka 10% untuk semua tipe motor Honda dengan pembelian kredit.</p>
+                            <ul>
+                                <li>Berlaku untuk semua produk</li>
+                                <li>Tenor 1-3 tahun</li>
+                                <li>Bunga mulai dari 0.99%</li>
+                            </ul>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-warning">
+                            <a href="#" class="btn btn-honda">Hitung Cicilan</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0">Gratis Aksesoris</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Gratis aksesoris senilai Rp 500.000 untuk pembelian cash Honda PCX dan ADV.</p>
+                            <ul>
+                                <li>Helm premium</li>
+                                <li>Jaket riding</li>
+                                <li>Box penyimpanan</li>
+                            </ul>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-success">
+                            <a href="#" class="btn btn-honda">Pilih Aksesoris</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-5 bg-light" id="testimonial">
+        <div class="container">
+            <h2 class="text-center section-title">Testimoni Pelanggan</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="mb-3">"Sangat puas dengan Honda Beat, irit bensin dan nyaman untuk harian. Pelayanan di dealer juga memuaskan."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50" alt="Customer">
+                            <div>
+                                <p class="testimonial-author mb-0">Budi Santoso</p>
+                                <small>Pemilik Honda Beat</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="mb-3">"PCX 160 benar-benar keren! Fiturnya lengkap dan performanya mantap. Worth it untuk harganya."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3" width="50" alt="Customer">
+                            <div>
+                                <p class="testimonial-author mb-0">Dewi Lestari</p>
+                                <small>Pemilik Honda PCX</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="mb-3">"Sudah 5 tahun pakai Honda tetap awet dan jarang ada masalah. Servis rutin di AHASS terjamin kualitasnya."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle me-3" width="50" alt="Customer">
+                            <div>
+                                <p class="testimonial-author mb-0">Agus Prasetyo</p>
+                                <small>Pemilik Honda Vario</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center section-title">Hubungi Kami</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Honda Eka Karunia Surabaya</h5>
+                            <p class="card-text">
+                                <i class="fas fa-map-marker-alt me-2 text-danger"></i> Jl. Raya Jemursari No. 234, Surabaya<br>
+                                <i class="fas fa-phone me-2 text-danger"></i> (031) 8471234<br>
+                                <i class="fas fa-envelope me-2 text-danger"></i> info@hondaekakarunia.com<br>
+                                <i class="fas fa-clock me-2 text-danger"></i> Buka setiap hari 08.00 - 17.00
+                            </p>
+                            <div class="mt-4">
+                                <!-- <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a> -->
+                                <!-- <a href="https://wa.me/6285190340088?text=Halo,%20saya%20ingin%20tanya%20soal%20promo%20bulan%20ini" class="social-icon"><i class="fab fa-whatsapp"></i></a> -->
+                                <!-- <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pemesanan via WhatsApp</h5>
+                            <p class="card-text">Untuk pemesanan dan informasi lebih lanjut, silakan hubungi kami melalui WhatsApp:</p>
+                            <a href="https://wa.me/6285190340088?text=Halo,%20saya%20ingin%20tanya%20soal%20promo%20bulan%20ini" class="btn btn-success w-100">
+                                <i class="fab fa-whatsapp me-2"></i>Hubungi via WhatsApp
+                            </a>
+                            <p class="mt-3 text-muted">Kami akan dengan senang hati membantu Anda memilih motor Honda yang tepat sesuai kebutuhan Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <h5>Tentang Honda Eka Karunia</h5>
+                    <p>Dealer resmi Honda Motor di Surabaya dengan pelayanan terbaik dan harga kompetitif. Memberikan solusi mobilitas dengan produk berkualitas Honda.</p>
+                </div>
+                <!-- <div class="col-md-2 mb-4">
+                    <h5>Produk</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Matic</a></li>
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">Cub</a></li>
+                        <li><a href="#">Maxi</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Layanan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Test Ride</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Sparepart</a></li>
+                        <li><a href="#">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p>Dapatkan info promo dan produk terbaru langsung ke email Anda.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email Anda">
+                        <button class="btn btn-danger" type="button">Daftar</button>
+                    </div>
+                </div>
+            </div> -->
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Honda Eka Karunia Surabaya. All rights reserved.</p>
+                </div>
+                <!-- <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none me-3">Syarat & Ketentuan</a>
+                    <a href="#" class="text-decoration-none">Kebijakan Privasi</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>

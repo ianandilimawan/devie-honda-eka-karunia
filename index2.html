@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Catalog Premium - Honda Eka Karunia Surabaya</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      :root {
+        --primary: #e11931;
+        --secondary: #1a1a1a;
+        --accent: #f8b400;
+        --light: #f8f9fa;
+        --dark: #212529;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f5f5f5;
+        color: var(--secondary);
+        overflow-x: hidden;
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1900&q=80');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .logo-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 300px;
+        margin: 0 auto 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+      }
+
+      .section-title {
+        position: relative;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--primary);
+      }
+
+      .product-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+        border: none;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-img-container {
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .product-card:hover .product-img {
+        transform: scale(1.05);
+      }
+
+      .product-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: var(--primary);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .product-body {
+        padding: 20px;
+      }
+
+      .product-price {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .btn-primary-custom {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary-custom:hover {
+        background-color: #c01024;
+        border-color: #c01024;
+        transform: translateY(-2px);
+      }
+
+      .btn-wa {
+        background-color: #25d366;
+        color: white;
+        font-weight: 600;
+        padding: 8px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-wa:hover {
+        background-color: #128c7e;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+      }
+
+      .testimonial-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        height: 100%;
+      }
+
+      .testimonial-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+        border: 3px solid var(--primary);
+      }
+
+      .contact-info {
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin-right: 10px;
+      }
+
+      footer {
+        background-color: var(--secondary);
+        color: white;
+        padding: 50px 0 20px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: var(--primary);
+        transform: translateY(-3px);
+      }
+
+      .floating-wa {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+      }
+
+      .floating-wa-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #25d366;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .floating-wa-btn:hover {
+        background-color: #128c7e;
+        transform: scale(1.1);
+        color: white;
+      }
+
+      .promo-banner {
+        background-color: var(--primary);
+        color: white;
+        padding: 15px 0;
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .promo-text {
+        animation: scrollText 20s linear infinite;
+        white-space: nowrap;
+      }
+
+      @keyframes scrollText {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .dealer-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url('https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1900&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 80px 0;
+      }
+
+      .specs-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .specs-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .specs-table th,
+      .specs-table td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .specs-table th {
+        background-color: var(--primary);
+        color: white;
+        width: 30%;
+      }
+
+      .modal-content {
+        border-radius: 10px;
+        overflow: hidden;
+        border: none;
+      }
+
+      .close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 99;
+        font-size: 1.5rem;
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+      <div class="container">
+        <div class="promo-text">
+          <i class="fas fa-tag me-2"></i> PROMO BESAR-BESARAN! DP Mulai dari 1
+          Jutaan - Cicilan Ringan - Diskon Hingga 10% - Hubungi Kami Sekarang
+          Juga!
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="logo-container animate__animated animate__fadeIn">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Honda_Astra_Motor_logo.svg/1200px-Honda_Astra_Motor_logo.svg.png"
+                alt="Honda Eka Karunia Logo"
+              />
+            </div>
+            <h1 class="animate__animated animate__fadeIn animate__delay-1s">
+              Honda Eka Karunia Surabaya
+            </h1>
+            <p class="lead animate__animated animate__fadeIn animate__delay-1s">
+              Dealer Resmi Motor Honda di Surabaya dengan Layanan Terbaik
+            </p>
+            <div
+              class="d-flex gap-3 mt-4 animate__animated animate__fadeIn animate__delay-2s"
+            >
+              <a href="#products" class="btn btn-primary-custom btn-lg"
+                >Lihat Produk</a
+              >
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20Honda%20Eka%20Karunia%2C%20saya%20ingin%20bertanya%20tentang%20motor%20Honda"
+                class="btn btn-wa btn-lg"
+              >
+                <i class="fab fa-whatsapp me-2"></i> Hubungi Kami
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Produk Unggulan Kami</h2>
+
+        <div class="row">
+          <!-- Product 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-img-container">
+                <img
+                  src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/gridoto/2023/04/21/new-beat-2023-gridotojpg-20230421035741.jpg"
+                  class="product-img"
+                  alt="Honda Beat"
+                />
+                <div class="product-badge">Terlaris</div>
+              </div>
+              <div class="product-body">
+                <h4>Honda Beat</h4>
+                <div class="product-price">Rp 18.500.000</div>
+                <p>
+                  Motor matic ekonomis dengan desain modern dan fitur canggih.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#beatModal"
+                  >
+                    Detail
+                  </button>
+                  <a
+                    href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Honda%20Beat%20yang%20ada%20di%20katalog%20Anda"
+                    class="btn btn-wa btn-sm"
+                  >
+                    <i class="fab fa-whatsapp me-1"></i> Pesan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-img-container">
+                <img
+                  src="https://asset.kompas.com/crops/2hxrO2mz9f3S9nQ8jKJv8zQJ0lY=/0x0:750x500/750x500/data/photo/2022/01/13/61dfb8b4a5d9a.jpg"
+                  class="product-img"
+                  alt="Honda Scoopy"
+                />
+                <div class="product-badge">New</div>
+              </div>
+              <div class="product-body">
+                <h4>Honda Scoopy</h4>
+                <div class="product-price">Rp 22.300.000</div>
+                <p>
+                  Matic retro stylish dengan teknologi modern dan performa
+                  tangguh.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#scoopyModal"
+                  >
+                    Detail
+                  </button>
+                  <a
+                    href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Honda%20Scoopy%20yang%20ada%20di%20katalog%20Anda"
+                    class="btn btn-wa btn-sm"
+                  >
+                    <i class="fab fa-whatsapp me-1"></i> Pesan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-img-container">
+                <img
+                  src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2022/10/05/20221005-094833jpg-20221005094843.jpg"
+                  class="product-img"
+                  alt="Honda PCX"
+                />
+                <div class="product-badge">Premium</div>
+              </div>
+              <div class="product-body">
+                <h4>Honda PCX</h4>
+                <div class="product-price">Rp 32.500.000</div>
+                <p>
+                  Matic premium dengan fitur canggih dan kenyamanan maksimal.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#pcxModal"
+                  >
+                    Detail
+                  </button>
+                  <a
+                    href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Honda%20PCX%20yang%20ada%20di%20katalog%20Anda"
+                    class="btn btn-wa btn-sm"
+                  >
+                    <i class="fab fa-whatsapp me-1"></i> Pesan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-img-container">
+                <img
+                  src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/gridoto/2023/04/21/20230421-093342-1jpg-20230421093342.jpg"
+                  class="product-img"
+                  alt="Honda Vario"
+                />
+                <div class="product-badge">Best Seller</div>
+              </div>
+              <div class="product-body">
+                <h4>Honda Vario</h4>
+                <div class="product-price">Rp 24.800.000</div>
+                <p>
+                  Matic sporty dengan performa bertenaga dan irit bahan bakar.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#varioModal"
+                  >
+                    Detail
+                  </button>
+                  <a
+                    href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Honda%20Vario%20yang%20ada%20di%20katalog%20Anda"
+                    class="btn btn-wa btn-sm"
+                  >
+                    <i class="fab fa-whatsapp me-1"></i> Pesan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-img-container">
+                <img
+                  src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/gridoto/2022/08/25/20220825-101254-1jpg-20220825101254.jpg"
+                  class="product-img"
+                  alt="Honda ADV"
+                />
+                <div class="product-badge">Adventure</div>
+              </div>
+              <div class="product-body">
+                <h4>Honda ADV</h4>
+                <div class="product-price">Rp 29.750.000</div>
+                <p>Matic adventure dengan desain tangguh dan fitur lengkap.</p>
+                <div class="d-flex justify-content-between">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#advModal"
+                  >
+                    Detail
+                  </button>
+                  <a
+                    href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Honda%20ADV%20yang%20ada%20di%20katalog%20Anda"
+                    class="btn btn-wa btn-sm"
+                  >
+                    <i class="fab fa-whatsapp me-1"></i> Pesan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card">
+              <div class="product-img-container">
+                <img
+                  src="https://imgx.gridoto.com/crop/0x0:0x0/700x465/photo/2022/06/30/cb150x-20220630090511.jpg"
+                  class="product-img"
+                  alt="Honda CB150X"
+                />
+                <div class="product-badge">Sport</div>
+              </div>
+              <div class="product-body">
+                <h4>Honda CB150X</h4>
+                <div class="product-price">Rp 35.200.000</div>
+                <p>
+                  Motor sport adventure dengan performa tinggi dan desain gagah.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cb150xModal"
+                  >
+                    Detail
+                  </button>
+                  <a
+                    href="https://wa.me/6281234567890?text=Saya%20tertarik%20dengan%20Honda%20CB150X%20yang%20ada%20di%20katalog%20Anda"
+                    class="btn btn-wa btn-sm"
+                  >
+                    <i class="fab fa-whatsapp me-1"></i> Pesan
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dealer Section -->
+    <section class="dealer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="section-title text-white">Honda Eka Karunia Surabaya</h2>
+            <p>
+              Sebagai dealer resmi Honda di Surabaya, kami berkomitmen untuk
+              memberikan pelayanan terbaik dengan:
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-check-circle me-2 text-primary"></i> Harga
+                kompetitif dan promo menarik
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle me-2 text-primary"></i> Proses
+                pembelian mudah dan transparan
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle me-2 text-primary"></i> Layanan
+                purna jual terbaik
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle me-2 text-primary"></i> Teknisi
+                berpengalaman dan bersertifikat
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-check-circle me-2 text-primary"></i> Garansi
+                resmi dari Honda
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.715575402052!2d112.7372743147746!3d-7.275844394753686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f963d6b9f0a5%3A0x1a5b8e8a8a8a8a8a!2sHonda%20Eka%20Karunia%20Surabaya!5e0!3m2!1sen!2sid!4v1621234567890!5m2!1sen!2sid"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Kenapa Memilih Kami?</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="text-center">
+              <div class="feature-icon">
+                <i class="fas fa-tags"></i>
+              </div>
+              <h4>Harga Terbaik</h4>
+              <p>
+                Kami menawarkan harga kompetitif dengan berbagai promo dan
+                diskon menarik setiap bulannya.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="text-center">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>Garansi Resmi</h4>
+              <p>
+                Semua produk kami dilengkapi dengan garansi resmi dari Honda
+                untuk memberikan kepastian kepada pelanggan.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="text-center">
+              <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h4>Layanan 24/7</h4>
+              <p>
+                Tim customer service kami siap melayani Anda kapan saja melalui
+                WhatsApp, telepon, atau email.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                class="testimonial-img mx-auto d-block"
+                alt="Testimoni 1"
+              />
+              <h5 class="text-center">Budi Santoso</h5>
+              <div class="text-center mb-3 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="text-center">
+                "Pelayanan sangat memuaskan, proses cepat dan harga bersaing.
+                Sudah 3 kali beli motor di sini dan selalu puas."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                class="testimonial-img mx-auto d-block"
+                alt="Testimoni 2"
+              />
+              <h5 class="text-center">Ani Wijaya</h5>
+              <div class="text-center mb-3 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="text-center">
+                "Salesnya ramah dan tidak memaksa. Penjelasan detail tentang
+                produk dan setelah sales service sangat baik."
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/75.jpg"
+                class="testimonial-img mx-auto d-block"
+                alt="Testimoni 3"
+              />
+              <h5 class="text-center">Doni Pratama</h5>
+              <div class="text-center mb-3 text-warning">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="text-center">
+                "Proses kredit mudah disetujui dengan bunga kompetitif. Motor
+                Honda Beat saya sampai tepat waktu dengan kondisi sempurna."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="contact-info">
+              <h4 class="mb-4">Informasi Kontak</h4>
+              <div class="mb-3">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <span>Jl. Raya Darmo Permai III No. 10, Surabaya</span>
+              </div>
+              <div class="mb-3">
+                <i class="fas fa-phone-alt contact-icon"></i>
+                <span>(031) 5678901</span>
+              </div>
+              <div class="mb-3">
+                <i class="fas fa-envelope contact-icon"></i>
+                <span>info@hondaekakarunia.com</span>
+              </div>
+              <div class="mb-3">
+                <i class="fab fa-whatsapp contact-icon"></i>
+                <span>0812-3456-7890 (WhatsApp)</span>
+              </div>
+              <div class="mt-4">
+                <h5>Jam Operasional</h5>
+                <p>
+                  Senin - Sabtu: 08.00 - 17.00 WIB<br />
+                  Minggu: 09.00 - 15.00 WIB
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="contact-info">
+              <h4 class="mb-4">Form Pemesanan</h4>
+              <form id="orderForm">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nama Lengkap"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Nomor WhatsApp"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Pilih Motor</option>
+                    <option value="beat">Honda Beat</option>
+                    <option value="scoopy">Honda Scoopy</option>
+                    <option value="pcx">Honda PCX</option>
+                    <option value="vario">Honda Vario</option>
+                    <option value="adv">Honda ADV</option>
+                    <option value="cb150x">Honda CB150X</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    rows="3"
+                    placeholder="Pesan Tambahan"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary-custom w-100">
+                  Kirim Pesanan
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h4>Honda Eka Karunia Surabaya</h4>
+            <p>
+              Dealer resmi motor Honda di Surabaya dengan pelayanan terbaik dan
+              harga kompetitif.
+            </p>
+            <div class="mt-3">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Produk</h5>
+            <div class="footer-links">
+              <a href="#">Honda Beat</a>
+              <a href="#">Honda Scoopy</a>
+              <a href="#">Honda PCX</a>
+              <a href="#">Honda Vario</a>
+              <a href="#">Honda ADV</a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Layanan</h5>
+            <div class="footer-links">
+              <a href="#">Penjualan</a>
+              <a href="#">Service</a>
+              <a href="#">Sparepart</a>
+              <a href="#">Kredit</a>
+              <a href="#">Asuransi</a>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5>Newsletter</h5>
+            <p>Dapatkan info promo dan penawaran terbaru dari kami</p>
+            <form class="mt-3">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email Anda"
+                />
+                <button class="btn btn-primary-custom" type="submit">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr class="mt-4 mb-4" style="border-color: rgba(255, 255, 255, 0.1)" />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">
+              &copy; 2023 Honda Eka Karunia Surabaya. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-links d-inline">
+              <a href="#" class="me-3">Syarat & Ketentuan</a>
+              <a href="#">Kebijakan Privasi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-wa">
+      <a
+        href="https://wa.me/6281234567890?text=Halo%20Honda%20Eka%20Karunia%2C%20saya%20ingin%20bertanya%20tentang%20motor%20Honda"
+        class="floating-wa-btn animate__animated animate__bounceIn animate__delay-3s"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- Product Modals -->
+    <!-- Honda Beat Modal -->
+    <div
+      class="modal fade"
+      id="beatModal"
+      tabindex="-1"
+      aria-labelledby="beatModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content rounded-4 border-0 shadow-lg">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="beatModalLabel">Honda Beat</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <!-- Gambar Carousel -->
+              <div class="col-md-6">
+                <div
+                  id="beatCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://www.astra-honda.com/img/motor-color-beat-abs-putih-ff38a25f49.jpg"
+                        class="d-block w-100"
+                        alt="Honda Beat White"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://www.astra-honda.com/img/motor-color-beat-deluxe-black-6a7277d259.jpg"
+                        class="d-block w-100"
+                        alt="Honda Beat Black"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#beatCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#beatCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Detail Spesifikasi -->
+              <div class="col-md-6">
+                <h4 class="fw-semibold">Rp 18.430.000*</h4>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item">
+                    🛞 Tipe Mesin: 4-Langkah, SOHC, eSP
+                  </li>
+                  <li class="list-group-item">⚙️ Kapasitas Mesin: 109.5 cc</li>
+                  <li class="list-group-item">
+                    🔋 Starter: Electric & Kick Starter
+                  </li>
+                  <li class="list-group-item">
+                    ⛽ Kapasitas Tangki: 4.2 liter
+                  </li>
+                  <li class="list-group-item">
+                    🌈 Varian Warna: Deluxe Black, Deluxe Blue, CBS Red, CBS
+                    White
+                  </li>
+                </ul>
+                <p class="text-muted small">
+                  *Harga OTR Surabaya, dapat berubah sewaktu-waktu
+                </p>
+                <div class="d-grid gap-2">
+                  <a
+                    href="https://wa.me/6281234567890?text=Halo%20Honda%20Eka%20Karunia%2C%20saya%20tertarik%20dengan%20Honda%20Beat.%20Bisa%20dibantu%20lebih%20lanjut%3F"
+                    class="btn btn-success rounded-pill fw-semibold"
+                  >
+                    <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Honda Scoopy Modal -->
+    <div
+      class="modal fade"
+      id="scoopyModal"
+      tabindex="-1"
+      aria-labelledby="scoopyModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content rounded-4 border-0 shadow-lg">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="scoopyModalLabel">
+              Honda Scoopy
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div
+                  id="scoopyCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://www.astra-honda.com/img/motor-color-scoopy-sporty-red-19ec2ef53e.jpg"
+                        class="d-block w-100"
+                        alt="Scoopy Red"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://www.astra-honda.com/img/motor-color-scoopy-prestige-white-00a40f9e00.jpg"
+                        class="d-block w-100"
+                        alt="Scoopy White"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#scoopyCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#scoopyCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h4 class="fw-semibold">Rp 22.390.000*</h4>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item">🛞 Mesin: 4-Langkah, SOHC, eSP</li>
+                  <li class="list-group-item">⚙️ Kapasitas Mesin: 109.5 cc</li>
+                  <li class="list-group-item">
+                    🛠️ Smart Key System (fitur khusus Prestige & Stylish)
+                  </li>
+                  <li class="list-group-item">
+                    🌈 Warna: Stylish Red, Prestige White, Sporty Red
+                  </li>
+                </ul>
+                <p class="text-muted small">
+                  *Harga OTR Surabaya, dapat berubah sewaktu-waktu
+                </p>
+                <div class="d-grid gap-2">
+                  <a
+                    href="https://wa.me/6281234567890?text=Halo%20Honda%20Eka%20Karunia%2C%20saya%20tertarik%20dengan%20Honda%20Scoopy.%20Bisa%20dibantu%20lebih%20lanjut%3F"
+                    class="btn btn-success rounded-pill fw-semibold"
+                  >
+                    <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Honda Vario 160 Modal -->
+    <div
+      class="modal fade"
+      id="varioModal"
+      tabindex="-1"
+      aria-labelledby="varioModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content rounded-4 border-0 shadow-lg">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="varioModalLabel">
+              Honda Vario 160
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div
+                  id="varioCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://www.astra-honda.com/img/motor-color-vario160-active-black-1-1.jpg"
+                        class="d-block w-100"
+                        alt="Vario 160 Active Black"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://www.astra-honda.com/img/motor-color-vario160-grande-matte-black-1-1.jpg"
+                        class="d-block w-100"
+                        alt="Vario 160 Grande Matte Black"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#varioCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#varioCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <h4 class="fw-semibold">Rp 26.339.000*</h4>
+                <ul class="list-group list-group-flush mb-3">
+                  <li class="list-group-item">
+                    🛞 Mesin: 4-Langkah, 4-Valve, eSP+
+                  </li>
+                  <li class="list-group-item">⚙️ Kapasitas Mesin: 156.9 cc</li>
+                  <li class="list-group-item">
+                    🛠️ Fitur: Smart Key System, USB Charger, CBS/ABS
+                  </li>
+                  <li class="list-group-item">
+                    🌈 Warna: Active Black, Grande Matte Black
+                  </li>
+                </ul>
+                <p class="text-muted small">
+                  *Harga OTR Surabaya, dapat berubah sewaktu-waktu
+                </p>
+                <div class="d-grid gap-2">
+                  <a
+                    href="https://wa.me/6281234567890?text=Halo%20Honda%20Eka%20Karunia%2C%20saya%20tertarik%20dengan%20Honda%20Vario%20160.%20Bisa%20dibantu%20lebih%20lanjut%3F"
+                    class="btn btn-success rounded-pill fw-semibold"
+                  >
+                    <i class="fab fa-whatsapp me-2"></i>Pesan via WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
